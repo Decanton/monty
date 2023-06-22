@@ -34,13 +34,13 @@ void f_add(stack_t **head, unsigned int counter)
 }
 
 /**
-* f_subtract - function that substracts nodes
+* f_sub - function that substracts nodes
 * @head: double head pointer to the stack
 * @counter: line count
 *
 * Return: nothing
 */
-void f_subtract(stack_t **head, unsigned int counter)
+void f_sub(stack_t **head, unsigned int counter)
 {
 	stack_t *temp;
 	int sub, nd;
@@ -50,7 +50,7 @@ void f_subtract(stack_t **head, unsigned int counter)
 		temp = temp->next;
 	if (nd < 2)
 	{
-		fprintf(stderr, "L%d: can't subtracts, since is stack too short\n", counter);
+		fprintf(stderr, "L%d: can't sub, stack too short\n", counter);
 		fclose(bus.file);
 		free(bus.content);
 		free_stack(*head);
@@ -116,7 +116,7 @@ void f_divide(stack_t **head, unsigned int counter)
 	}
 	if (length < 2)
 	{
-		fprintf(stderr, "L%d: can't divide, stack too short\n", counter);
+		fprintf(stderr, "L%d: can't div, stack too short\n", counter);
 		fclose(bus.file);
 		free(bus.content);
 		free_stack(*head);
